@@ -15,7 +15,7 @@ import Style from "./SideBar.module.css";
 import images from "../../../img";
 import Button from "../../Button/Button";
 
-const SideBar = () => {
+const SideBar = ({setOpenSideMenu}) => {
 
   const [openDiscover, setOpenDiscover] = useState(false);
   const [openHelp, setOpenHelp] = useState(false);
@@ -77,6 +77,27 @@ const SideBar = () => {
       link: "subscription",
     },
   ];
+
+  const openDiscoverMenu = () =>{
+    if(!openDiscover){
+      setOpenDiscover(true);
+    } else {
+      setOpenDiscover(false);
+    }
+  };
+
+  const openHelpMenu = () => {
+    if(!openHelp){
+      setOpenHelp(true);
+    } else {
+      setOpenHelp(false);
+    }
+  };
+
+  const closeSideBar = () => {
+    setOpenSideMenu(false);
+  };
+
   return (
     <div className={Style.SideBar}>
       <GrClose className={Style.SideBar_closeBtn} onClick={() => closeSideBar()}/>
@@ -123,8 +144,27 @@ const SideBar = () => {
         </div>
 
         <div>
-           
+          <div className={Style.sideBar_menu_box} onClick={()=> openHelpMenu()}>
+            <p>Help Center</p>
+            <TiArrowSortedDown/>
+          </div>
+
+          {
+            openHelp && (
+              <div className={Style.sideBar_discover}>
+                {helpCenter.map((el, i)=> (
+                  <p key={i + 1}>
+                    <Link href={{pathname: `${el.link}`}}>{el.name}</Link>
+                  </p>
+                ))}
+              </div>
+            )}
         </div>
+      </div>
+
+      <div className={Style.sideBar_button}>
+        <Button btnName="Create"/>
+        <Button btnName="Connect Wallet"/>
       </div>
     </div>
   )

@@ -82,7 +82,7 @@ const NavBar = () => {
       <div className={Style.navbar_container}>
         <div className={Style.navbar_container_left}>
           <div className={Style.logo}>
-            <Image src={images.logo} alt="NFT MARKET PLACE" width={100} height={100}/>
+            <Image src={images.logo} alt="NFT MARKET PLACE" width={100} height={100} />
           </div>
           <div className={Style.navbar_container_left_box_input}>
             <div className={Style.navbar_container_left_box_input_box}>
@@ -148,8 +148,6 @@ const NavBar = () => {
           <SideBar setOpenSideMenu={setOpenSideMenu}  />
         </div>
       )}
-
-     
     </div>
   );
 };
