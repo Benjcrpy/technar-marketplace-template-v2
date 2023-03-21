@@ -1,10 +1,11 @@
+import { hasUncaughtExceptionCaptureCallback } from 'process';
 import React from 'react'
 
 import Style from "./Button.module.css"
 const Button = () => {
   return 
-    <div>Button</div>
-  
+    <div>Button</div>;
+    
 };
 
 export default Button;
