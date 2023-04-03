@@ -1,0 +1,5 @@
+.notification {
+    position: absolute;
+    padding: 2rem 1rem;
+    box-shadow: var(--box-shadow);
+}

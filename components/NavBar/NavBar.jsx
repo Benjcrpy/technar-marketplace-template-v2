@@ -14,6 +14,7 @@ import images from "../../img";
 
 
 
+
 const NavBar = () => {
   const [discover, setDiscover] = useState(false);
   const [help, setHelp] = useState(false);
@@ -82,11 +83,11 @@ const NavBar = () => {
       <div className={Style.navbar_container}>
         <div className={Style.navbar_container_left}>
           <div className={Style.logo}>
-            <Image src={images.logo} alt="NFT MARKET PLACE" width={100} height={100} />
+            <Image src={images.logo} alt="NFT MARKET PLACE" width={100} height={100} className='cursor-pointer' />
           </div>
           <div className={Style.navbar_container_left_box_input}>
             <div className={Style.navbar_container_left_box_input_box}>
-              <input type="text" placeholder="Search NFT" />
+              <input type="text" placeholder="Search" />
               <BsSearch onClick={() => {}} className={Style.search_icon}/>
             </div>
           </div>
@@ -95,10 +96,11 @@ const NavBar = () => {
         {/* //END OF LEFT SECTIOn */}
         <div className={Style.navbar_container_right}>
           <div className={Style.navbar_container_right_discover}>
+
             {/* DISCOVER MENU */}
-            <p onClick={(e)=> openMenu(e)}>Discover</p>
+            <p onClick={(e)=> openMenu(e)} className='cursor-pointer'>Discover</p>
             {discover &&(
-              <div className={Style.navbar_container_right_discover_box}>
+              <div className={Style.navbar_container_right_discover_box} >
               <Discover />
             </div>
             )}
@@ -106,7 +108,7 @@ const NavBar = () => {
 
           {/* HELP CENTER MENU */}
           <div className={Style.navbar_container_right_help}>
-            <p onClick={(e) => openMenu(e)}>Help Center</p>
+            <p onClick={(e) => openMenu(e)} className='relative cursor-pointer'>Help Center</p>
             {help &&(
               <div className={Style.navbar_container_right_help_box}>
                 <HelpCenter />
@@ -122,11 +124,12 @@ const NavBar = () => {
 
           {/* CREATE BUTTON SECTION */}
           <div className={Style.navbar_container_right_button}>
+            <p> Button </p>
               <Button btnText="Create" />
           </div>
 
           {/*USER PROFILE */}
-          <div className={Style.navbar_container_right_profile_box}>
+          <div className={Style.navbar_container_right_profile_box} class="cursor-pointer rounded-lg border-2 border-indigo-500">
             <div className={Style.navbar_container_right_profile}>
               <Image src={images.user1} alt="Profile" width={40} height={40} onClick={() => openProfile()} 
               className={Style.navbar_container_right_profile}/>
@@ -144,7 +147,7 @@ const NavBar = () => {
 
       {/* SIDEBAR COMPONENT */}
       {openSideMenu && (
-        <div className={Style.SideBar}>
+        <div className={Style.sideBar}>
           <SideBar setOpenSideMenu={setOpenSideMenu}  />
         </div>
       )}
