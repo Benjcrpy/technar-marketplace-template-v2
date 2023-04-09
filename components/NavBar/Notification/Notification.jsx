@@ -18,7 +18,7 @@ const Notification = () => {
           <p>Measure action your user</p>
           <small>3 minutes ago</small>
         </div>
-        <span className={Style.notification_box_nex}></span>
+        <span className={Style.notification_box_new}></span>
       </div>
     </div>
   )

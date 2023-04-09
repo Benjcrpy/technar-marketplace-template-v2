@@ -14,8 +14,8 @@ const Profile = ({ currentAccount }) => {
       <div className={Style.profile_account}>
         <Image src={images.user1} alt="user profile" width={50} height={50} className={Style.profile_account_img}/>
         <div className={Style.profile_account_info}>
-        <p>Anthony</p>
-        <small>0xx021305213..</small>
+        <p className="text-slate-200">Anthony</p>
+        <small className="border-2 border-cyan-900 rounded-lg bg-slate-900 cursor-pointer">0xx021305213..</small>
         </div>
       </div>
 

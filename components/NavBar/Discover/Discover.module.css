@@ -1,4 +1,5 @@
 .discover {
+    color: var(--text-color);
     padding: .5rem 1rem;
     transition: all .3 ease-in;
     z-index: 222222222;
