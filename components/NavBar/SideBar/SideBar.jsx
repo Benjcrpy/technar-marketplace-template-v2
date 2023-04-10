@@ -99,11 +99,11 @@ const SideBar = ({setOpenSideMenu}) => {
   };
 
   return (
-    <div className={Style.SideBar}>
+    <div className={Style.SideBar} class="text-slate-400">
       <GrClose className={Style.SideBar_closeBtn} onClick={() => closeSideBar()}/>
 
       <div className={Style.sideBar_box}>
-        <Image src={Image.logo} alt="logo" width={150} height={150}/>
+        <Image src={images.logo} alt="logo" width={150} height={150}/>
         <p>Discover the most outstanding article on all topices of NFT and Write your own stories and share with them</p>
         <div className={Style.sideBar_social}>
           <a href="#">
