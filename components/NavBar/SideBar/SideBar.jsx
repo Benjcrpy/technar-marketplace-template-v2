@@ -100,11 +100,11 @@ const SideBar = ({setOpenSideMenu}) => {
 
   return (
     <div className={Style.SideBar} class="text-slate-400">
-      <GrClose className={Style.SideBar_closeBtn} onClick={() => closeSideBar()}/>
+      <GrClose className={Style.SideBar_closeBtn} class="text-slate-200" onClick={() => closeSideBar()}/>
 
       <div className={Style.sideBar_box}>
         <Image src={images.logo} alt="logo" width={150} height={150}/>
-        <p>Discover the most outstanding article on all topices of NFT and Write your own stories and share with them</p>
+        <p>Discover the most outstanding article on all topic of NFT and Write your own stories and share with them</p>
         <div className={Style.sideBar_social}>
           <a href="#">
             <TiSocialFacebook />
@@ -163,8 +163,8 @@ const SideBar = ({setOpenSideMenu}) => {
       </div>
 
       <div className={Style.sideBar_button}>
-        <Button btnName="Create"/>
-        <Button btnName="Connect Wallet"/>
+        <Button btnName="Create" handleClick={() => {}}/>
+        <Button btnName="Connect Wallet" handleClick={() => {}}/>
       </div>
     </div>
   )

@@ -43,7 +43,7 @@ const NavBar = () => {
     }
   };
 
-  const openNotication = () => {
+  const openNotification = () => {
     if(!notification){
       setNotification(true);
       setDiscover(false);
@@ -118,14 +118,14 @@ const NavBar = () => {
 
           {/* NOTIFICATION */}
           <div className={Style.navbar_container_right_notify}>
-            <MdNotifications className={Style.notify} onClick={() => openNotication()}/>
+            <MdNotifications className={Style.notify} onClick={() => openNotification()}/>
             {notification && <Notification />}
           </div>
 
           {/* CREATE BUTTON SECTION */}
           <div className={Style.navbar_container_right_button}>
-            <p> Button </p>
-              <Button btnText="Create" />
+            
+              <Button btnName="Create" handleClick={() => {}} className="border-2 rounded-lg"/>
           </div>
 
           {/*USER PROFILE */}
@@ -139,8 +139,10 @@ const NavBar = () => {
           </div>
 
           {/* MENU BUTTON */}
-          <div className={Style.container_right_menuBtn}>
-            <CgMenuRight className={Style.menuIcon} onClick={() => openSidebar()}/>
+          <div className={Style.navbar_container_right_menuBtn}>
+            <CgMenuRight className={Style.menuIcon} 
+            onClick={() => openSidebar()}
+            />
           </div>
         </div>
       </div>
@@ -148,7 +150,8 @@ const NavBar = () => {
       {/* SIDEBAR COMPONENT */}
       {openSideMenu && (
         <div className={Style.sideBar}>
-          <SideBar setOpenSideMenu={setOpenSideMenu}  />
+          <SideBar 
+          setOpenSideMenu={setOpenSideMenu}  />
         </div>
       )}
     </div>
