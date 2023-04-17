@@ -25,16 +25,18 @@
 .logo {
   color: var(--icons-color);
   font-size: 4rem;
+  
 }
 
 .navbar_container_left_box_input_box {
-    width: 60%;
+    width: 70%;
     border: 1px solid;
-    border-color: blue;
+    border-color: #FAEAB1;
     display: flex;
     align-items: center;
     padding: .5rem;
-    border-radius: 2rem;
+    border-radius: 1rem;
+    color: white;
 }
 
 .navbar_container_left_box_input_box input {
@@ -70,13 +72,14 @@
 
 .navbar_container_right_discover_box,
 .navbar_container_right_help_box {
+    margin-top: 1rem;
     position: absolute;
     padding: 1rem .5rem;
     box-shadow: var(--box-shadow);
     font-size: 1rem;
     width: 15rem;
     border-radius: 1rem;
-    background-color: var(--main-bg-color);
+    background-color: var(--box-color);
 }
 
 .navbar_container_right_notify {
@@ -86,6 +89,7 @@
 
 .notify{
     font-size: 2rem;
+    color: white;
 }
 
 .navbar_container_right_button {
@@ -117,7 +121,7 @@
     position: fixed;
     top: 0;
     width: 24rem;
-    background-color: var(--main-bg-color);
+    background-color: rgb(100 116 139);
     box-shadow: var(--box-shadow);
     height: 100vh;
     overflow-y: auto;

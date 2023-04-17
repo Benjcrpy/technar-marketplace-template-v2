@@ -10,7 +10,7 @@
     left: -20rem;
     top: 3.5rem;
     z-index: 2222222222;
-    background-color: var(--main-bg-color);
+    background-color: var(--box-color);
 }
 
 .notification > p {

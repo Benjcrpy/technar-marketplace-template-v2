@@ -58,11 +58,11 @@ const SideBar = ({setOpenSideMenu}) => {
   const helpCenter = [
     {
       name: "About",
-      link: "aboutus",
+      link: "about us",
     },
     {
       name: "Contact Us",
-      link: "contactus",
+      link: "contact us",
     },
     {
       name: "Sign Up",
@@ -99,8 +99,8 @@ const SideBar = ({setOpenSideMenu}) => {
   };
 
   return (
-    <div className={Style.SideBar} class="text-slate-400">
-      <GrClose className={Style.SideBar_closeBtn} class="text-slate-200" onClick={() => closeSideBar()}/>
+    <div className={Style.SideBar} class="text-slate-200 bg-slate-500">
+      <GrClose className={Style.sideBar_closeBtn} onClick={() => closeSideBar()}/>
 
       <div className={Style.sideBar_box}>
         <Image src={images.logo} alt="logo" width={150} height={150}/>

@@ -1,5 +1,5 @@
 .button {
-    background-color: var(--main-bg-color);
+    background-color: rgb(209 213 219);
     padding: 1rem 2rem;
     border: 1px solid var(--main-bg-colors);
     border-radius: 1rem;
