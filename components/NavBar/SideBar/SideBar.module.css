@@ -1,4 +1,5 @@
 .sideBar_box{
+    font-family: var(--font-family-1);
     padding: 2rem;
     border-bottom: 1px solid var(--icons-color);
     background-color: rgb(100 116 139);

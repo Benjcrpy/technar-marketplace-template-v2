@@ -1,11 +1,12 @@
 import '../styles/globals.css'
 
-import { NavBar } from "../components/Componentsindex";
+import { NavBar,Footer } from "../components/Componentsindex";
 
 const MyApp = ({ Component, pageProps}) => (
    <div>
       <NavBar />
       <Component {...pageProps} />
+      <Footer />
    </div>
   
 )
