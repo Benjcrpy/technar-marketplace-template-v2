@@ -1,9 +1,16 @@
-import React from 'react'
+import React from 'react';
+
+
+import Style from '../styles/index.module.css';
+import { HeroSection,Service } from '../components/Componentsindex';
 
 const Home = () => {
   return (
-    <div></div>
-  )
-}
+   <div className={Style.homepage}>
+      <HeroSection/>
+      <Service/>
+   </div>
+  );
+};
 
 export default Home
