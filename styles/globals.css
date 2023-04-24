@@ -28,6 +28,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Quantico', sans-serif; 
+  font-family-2: 'Poppins', sans-serif;
   font-size: 14px;
   background-color: var(--main-bg-color);
   color: var(--icons-color);

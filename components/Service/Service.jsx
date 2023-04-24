@@ -8,13 +8,15 @@ const Service = () => {
   return (
     <div className={Style.service}>
       <div className={Style.service_box}>
-        <div className={Style.service_box_item} >
+        <div className={Style.service_box_item}>
+        <div className={Style.service_box_item_image}>
           <Image
             src={images.service1}
             alt="Filter & Discover"
             width={100}
             height={100}
           />
+          </div>
           <p className={Style.service_box_item_step}>
             <span>Step 1</span>
           </p>
@@ -25,12 +27,14 @@ const Service = () => {
           </p>
         </div>
         <div className={Style.service_box_item}>
+        <div className={Style.service_box_item_image}>
           <Image
             src={images.service2}
             alt="Filter & Discover"
             width={100}
             height={100}
           />
+          </div>
           <p className={Style.service_box_item_step}>
             <span>Step 1</span>
           </p>
@@ -41,12 +45,14 @@ const Service = () => {
           </p>
         </div>
         <div className={Style.service_box_item}>
+          <div className={Style.service_box_item_image}>
           <Image
             src={images.service3}
             alt="Connect Wallet"
             width={100}
             height={100}
           />
+          </div>
           <p className={Style.service_box_item_step}>
             <span>Step 1</span>
           </p>
@@ -57,12 +63,14 @@ const Service = () => {
           </p>
         </div>
         <div className={Style.service_box_item}>
+        <div className={Style.service_box_item_image}>
           <Image
             src={images.service1}
             alt="Filter & Discover"
             width={100}
             height={100}
           />
+          </div>
           <p className={Style.service_box_item_step}>
             <span>Step 1</span>
           </p>
