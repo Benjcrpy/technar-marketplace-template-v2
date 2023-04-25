@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 
-import { NavBar,Footer } from "../components/Componentsindex";
+import { NavBar, Footer } from "../components/Componentsindex";
 
 const MyApp = ({ Component, pageProps}) => (
    <div>
