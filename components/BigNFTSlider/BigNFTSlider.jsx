@@ -10,6 +10,39 @@ import images from "../../img";
 import Button from "../Button/Button";
 
 const BigNFTSlider = () => {
+
+  const [days, setDays] = useState(0)
+  const [hours, setHours] = useState(0)
+  const [minutes, setMinutes] = useState(0)
+  const [seconds, setSecods] = useState(0)
+
+useEffect(() => {
+
+  const target = new Date("12/31/2023 23:29:29")
+
+
+  const interval = setInterval(() =>{
+  const now = new Date()
+  const difference = target.getTime() - now.getTime()
+
+  const d = Math.floor(difference / (100 * 60 * 60 * 24))
+  setDays(d)
+
+  const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60 )
+  ); 
+  setHours(h)
+
+  const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
+  setMinutes(m)
+
+  const s = Math.floor((difference % (1000 * 60)) / 1000)
+  setSecods(s)
+
+  }, 1000)
+
+  return () => clearInterval(interval)
+}, [])
+
   const [idNumber, setIdNumber] = useState(0);
 
   const sliderData = [
@@ -22,8 +55,9 @@ const BigNFTSlider = () => {
       like: 243,
       image: images.user1,
       nftImage: images.nft_image_1,
+      
       time: {
-        days: 21,
+        days: 40,
         hours: 40,
         minutes: 81,
         seconds: 15,
@@ -39,7 +73,7 @@ const BigNFTSlider = () => {
       image: images.user2,
       nftImage: images.nft_image_2,
       time: {
-        days: 77,
+        days: 50,
         hours: 11,
         minutes: 21,
         seconds: 45,
@@ -55,7 +89,7 @@ const BigNFTSlider = () => {
       image: images.user3,
       nftImage: images.nft_image_3,
       time: {
-        days: 37,
+        days: 34,
         hours: 20,
         minutes: 11,
         seconds: 55,
@@ -71,7 +105,7 @@ const BigNFTSlider = () => {
       image: images.user4,
       nftImage: images.nft_image_1,
       time: {
-        days: 87,
+        days: 28,
         hours: 29,
         minutes: 10,
         seconds: 15,
@@ -107,12 +141,13 @@ const BigNFTSlider = () => {
                 width={50}
                 height={50}
               />
+              
               <div className={Style.bigNFTSlider_box_left_creator_profile_info}>
                 <p>Creator</p>
                 <h4>
-                  {sliderData[idNumber].name}{" "}
+                  {sliderData[idNumber].name} {" "}
                   <span>
-                    <MdVerified />
+                    <MdVerified/>
                   </span>
                 </h4>
               </div>
@@ -158,21 +193,21 @@ const BigNFTSlider = () => {
               <div
                 className={Style.bigNFTSlider_box_left_bidding_box_timer_item}
               >
-                <p>{sliderData[idNumber].time.hours}</p>
+                <p>{hours}</p>
                 <span>Hours</span>
               </div>
 
               <div
                 className={Style.bigNFTSlider_box_left_bidding_box_timer_item}
               >
-                <p>{sliderData[idNumber].time.minutes}</p>
+                <p>{minutes}</p>
                 <span>mins</span>
               </div>
 
               <div
                 className={Style.bigNFTSlider_box_left_bidding_box_timer_item}
               >
-                <p>{sliderData[idNumber].time.seconds}</p>
+                <p>{seconds}</p>
                 <span>secs</span>
               </div>
             </div>
