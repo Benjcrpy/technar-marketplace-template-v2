@@ -47,10 +47,10 @@ useEffect(() => {
 
   const sliderData = [
     {
-      title: "Hello NFT",
+      title: "Cute NFT",
       id: 1,
-      name: "Daulat Hussain",
-      collection: "GYm",
+      name: "Anthony",
+      collection: "Cute",
       price: "00664 ETH",
       like: 243,
       image: images.user1,
@@ -66,9 +66,9 @@ useEffect(() => {
     {
       title: "Buddy NFT",
       id: 2,
-      name: "Shoaib Hussain",
+      name: "George",
       collection: "Home",
-      price: "0000004 ETH",
+      price: "004 ETH",
       like: 243,
       image: images.user2,
       nftImage: images.nft_image_2,
@@ -96,10 +96,10 @@ useEffect(() => {
       },
     },
     {
-      title: "Home NFT",
+      title: "Builder NFT",
       id: 4,
-      name: "Raayan Hussain",
-      collection: "GYm",
+      name: "Ryzen",
+      collection: "Build",
       price: "4664 ETH",
       like: 243,
       image: images.user4,
