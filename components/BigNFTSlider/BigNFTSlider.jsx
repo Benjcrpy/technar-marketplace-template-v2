@@ -18,14 +18,14 @@ const BigNFTSlider = () => {
 
 useEffect(() => {
 
-  const target = new Date("12/31/2023 23:29:29")
+  const target = new Date("11/31/2023 23:29:29")
 
 
   const interval = setInterval(() =>{
   const now = new Date()
   const difference = target.getTime() - now.getTime()
 
-  const d = Math.floor(difference / (100 * 60 * 60 * 24))
+  const d = Math.floor(difference / (1000 * 60 * 60 * 24))
   setDays(d)
 
   const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60 )
@@ -186,7 +186,7 @@ useEffect(() => {
               <div
                 className={Style.bigNFTSlider_box_left_bidding_box_timer_item}
               >
-                <p>{sliderData[idNumber].time.days}</p>
+                <p>{days}</p>
                 <span>Days</span>
               </div>
 
