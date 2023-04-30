@@ -12,13 +12,23 @@ import Button from "../Button/Button";
 const BigNFTSlider = () => {
 
   const [days, setDays] = useState(0)
+  const [days1, setDays1] = useState(0)
+  const [days2, setDays2] = useState(0)
+  const [days3, setDays3] = useState(0)
+
   const [hours, setHours] = useState(0)
+ 
+
   const [minutes, setMinutes] = useState(0)
-  const [seconds, setSecods] = useState(0)
+
+
+  const [seconds, setSeconds] = useState(0)
+
+  
 
 useEffect(() => {
 
-  const target = new Date("11/31/2023 23:29:29")
+  const target = new Date("11/31/2023 23:59:59")
 
 
   const interval = setInterval(() =>{
@@ -27,16 +37,21 @@ useEffect(() => {
 
   const d = Math.floor(difference / (1000 * 60 * 60 * 24))
   setDays(d)
+  const d1 = Math.floor(difference / (2000 * 60 * 60 * 24))
+  setDays1(d1)
+  const d2 = Math.floor(difference / (4000 * 60 * 60 * 24))
+  setDays2(d2)
+  const d3 = Math.floor(difference / (6000 * 60 * 60 * 24))
+  setDays3(d3)
+  
 
-  const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60 )
-  ); 
+  const h = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60 )); 
   setHours(h)
-
-  const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
+  const m = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 70))
   setMinutes(m)
-
   const s = Math.floor((difference % (1000 * 60)) / 1000)
-  setSecods(s)
+  setSeconds(s)
+  
 
   }, 1000)
 
@@ -47,69 +62,52 @@ useEffect(() => {
 
   const sliderData = [
     {
-      title: "Cute NFT",
+      title: "Shallow NFT #103",
       id: 1,
       name: "Anthony",
       collection: "Cute",
-      price: "00664 ETH",
+      price: "06.64 ETH",
       like: 243,
       image: images.user1,
       nftImage: images.nft_image_1,
-      
-      time: {
-        days: 40,
-        hours: 40,
-        minutes: 81,
-        seconds: 15,
-      },
+      days: days,
+    
     },
     {
-      title: "Buddy NFT",
+      title: "Buddy NFT #100",
       id: 2,
       name: "George",
       collection: "Home",
-      price: "004 ETH",
+      price: "0.04 ETH",
       like: 243,
       image: images.user2,
       nftImage: images.nft_image_2,
-      time: {
-        days: 50,
-        hours: 11,
-        minutes: 21,
-        seconds: 45,
-      },
+      days: days1,
+ 
     },
     {
-      title: "Gym NFT",
+      title: "Buddy NFT #53 ",
       id: 3,
-      name: "Raayan Hussain",
+      name: "Ryan",
       collection: "GYm",
-      price: "0000064 ETH",
+      price: "0.3064 ETH",
       like: 243,
       image: images.user3,
       nftImage: images.nft_image_3,
-      time: {
-        days: 34,
-        hours: 20,
-        minutes: 11,
-        seconds: 55,
-      },
+      days: days2,
+ 
     },
     {
-      title: "Builder NFT",
+      title: "Buddy NFT #394",
       id: 4,
-      name: "Ryzen",
+      name: "Justin",
       collection: "Build",
-      price: "4664 ETH",
+      price: "4.664 ETH",
       like: 243,
       image: images.user4,
-      nftImage: images.nft_image_1,
-      time: {
-        days: 28,
-        hours: 29,
-        minutes: 10,
-        seconds: 15,
-      },
+      nftImage: images.nft_image_2,
+      days: days3,
+   
     },
   ];
 
@@ -186,7 +184,7 @@ useEffect(() => {
               <div
                 className={Style.bigNFTSlider_box_left_bidding_box_timer_item}
               >
-                <p>{days}</p>
+                <p>{sliderData[idNumber].days}</p>
                 <span>Days</span>
               </div>
 
