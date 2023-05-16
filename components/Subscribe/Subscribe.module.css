@@ -83,13 +83,13 @@
 }
 
 .subscribe_box_left_input_icon {
-    font-size: 1rem;
+    font-size: 2rem;
     color: black;
     cursor: pointer;
     margin-top: 4rem;
     background-color: aqua;
     padding: .5rem 1rem;
-    border-radius: 1rem;
+    border-radius: 2rem;
     width: 4rem;
     text-align: center;
     

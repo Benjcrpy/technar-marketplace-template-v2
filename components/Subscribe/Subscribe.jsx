@@ -1,7 +1,7 @@
 import React,  { useRef } from "react";
 import { RiSendPlaneFill } from "react-icons/ri";
 import Image from "next/image";
-import emailjs from '@emailjs/browser';
+
 
 //INTERNAL IMPORT
 import Style from "./Subscribe.module.css";
@@ -30,7 +30,7 @@ const Subscribe = () => {
           <h2>Never miss a drop</h2>
           <p>
             Subcribe to our super-exclusive drop list and be the first to know
-            abour upcoming drops
+            about upcoming drops
           </p>
           <div className={Style.subscribe_box_left_box}>
             <span>01</span>
