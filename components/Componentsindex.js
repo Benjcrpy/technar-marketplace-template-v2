@@ -7,6 +7,7 @@ import BigNFTSlider from "./BigNFTSlider/BigNFTSlider";
 import Subscribe from "./Subscribe/Subscribe";
 import Title from "./Title/Title"
 import Category from "./Category/Category";
+import Filter from "./Filter/Filter"
 
 
 
@@ -20,4 +21,5 @@ export {
     Subscribe, 
     Title,
     Category,
+    Filter,
    };
